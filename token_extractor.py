@@ -32,7 +32,7 @@ parser.add_argument("-ni", "--non_interactive", required=False, help="Non-nterac
 parser.add_argument("-u", "--username", required=False, help="Username")
 parser.add_argument("-p", "--password", required=False, help="Password")
 parser.add_argument("-s", "--server", required=False, help="Server", choices=[*SERVERS, ""])
-parser.add_argument("-l", "--log_level", required=False, help="Log level", default="CRITICAL", choices=list(logging.getLevelNamesMapping().keys()))
+parser.add_argument("-l", "--log_level", required=False, help="Log level", default="CRITICAL", choices=list("DEBUG", "ERROR", "WARNING", "INFO", "DEBUG"))
 parser.add_argument("-o", "--output", required=False, help="Output file")
 parser.add_argument("--host", required=False, help="Host")
 args = parser.parse_args()
